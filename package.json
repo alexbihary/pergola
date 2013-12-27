@@ -1,0 +1,20 @@
+{
+  "name": "Pergola CSS Framework",
+  "version": "0.0.0",
+  "description": "a less css framework for modern browsers with semantic sensibility",
+  "keywords": [
+    "less",
+    "lesscss",
+    "css",
+    "framework",
+    "grid"
+  ],
+  "author": "Alexander Bihary",
+  "repository": {
+    "type": "https",
+    "url": "https://github.com/alexbihary/pergola.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+  }
+}
