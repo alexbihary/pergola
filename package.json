@@ -1,5 +1,5 @@
 {
-  "name": "Pergola CSS Framework",
+  "name": "Pergola",
   "version": "0.0.0",
   "description": "a less css framework for modern browsers with semantic sensibility",
   "keywords": [
@@ -16,5 +16,13 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-less": "~0.8.3",
+    "grunt-contrib-uglify": "~0.2.7",
+    "connect-livereload": "~0.3.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-open": "~0.2.2",
+    "grunt-contrib-connect": "~0.5.0"
   }
 }
