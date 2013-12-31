@@ -1,0 +1,89 @@
+//make:grid
+
+//default variables
+@precision: 20;
+
+.make-grid-base(@precision: @precision) {
+  //grids and rows
+  .grid,
+  .row {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 0;
+    .clearfix();
+  }
+
+  //cells and columns
+  [class*='@{cell}'],
+  .columns > * {
+    display: inline-block;
+    position: relative;
+    min-height: 1px;
+    vertical-align: top; //req. once these were no longer floated
+  }
+
+  [class*='@{cell}']:not(.grid),
+  .columns > *:not(.grid) {
+    font-size: 1.0rem;
+  }
+
+
+  .make-equal-columns(@n, @nword) {
+    .@{nword}.columns > * { width: percentage(round((1 / @n), @precision)); }
+  }
+  .make-equal-columns(2, two);
+  .make-equal-columns(3, three);
+  .make-equal-columns(4, four);
+  .make-equal-columns(5, five);
+  .make-equal-columns(6, six);
+  .make-equal-columns(7, seven);
+  .make-equal-columns(8, eight);
+  .make-equal-columns(9, nine);
+  .make-equal-columns(10, ten);
+  .make-equal-columns(11, eleven);
+  .make-equal-columns(12, twelve);
+
+}
+
+//cell
+.make-grid(@part; @class; @index; @precision: @precision) when (@index > 0) and (@part = @cell) {
+  @val: round((@index / @grid-columns), @precision);
+  .@{class}@{cell}@{index} { width: percentage(@val); }
+  .make-grid(@part; @class; (@index - 1)); //recursive
+}
+//push
+.make-grid(@part; @class; @index; @precision: @precision) when (@index > 0) and (@part = @push) {
+  @val: round((@index / @grid-columns), @precision);
+  .@{class}@{push}@{index} { left: percentage(@val); }
+  .make-grid(@part; @class; (@index - 1)); //recursive
+}
+//pull
+.make-grid(@part; @class; @index; @precision: @precision) when (@index > 0) and (@part = @pull) {
+  @val: round((@index / @grid-columns), @precision);
+  .@{class}@{pull}@{index} { left: percentage(-@val); }
+  .make-grid(@part; @class; (@index - 1)); //recursive
+}
+//prefix
+.make-grid(@part; @class; @index; @precision: @precision) when (@index > 0) and (@part = @prefix) {
+  @val: round((@index / @grid-columns), @precision);
+  .@{class}@{prefix}@{index} { margin-left: percentage(@val); }
+  .make-grid(@part; @class; (@index - 1)); //recursive
+}
+//suffix
+.make-grid(@part; @class; @index; @precision: @precision) when (@index > 0) and (@part = @suffix) {
+  @val: round((@index / @grid-columns), @precision);
+  .@{class}@{suffix}@{index} { margin-right: percentage(@val); }
+  .make-grid(@part; @class; (@index - 1)); //recursive
+}
+
+.make-grid(@class; @index) when (@index > 0) {
+  @val: (@index / @grid-columns);
+  .@{class}@{cell}@{index} { width: percentage(@val); }
+  .@{class}@{push}@{index} { left: percentage(@val); }
+  .@{class}@{pull}@{index} { right: percentage(@val); }
+  .@{class}@{prefix}@{index} { margin-left: percentage(@val); }
+  .@{class}@{suffix}@{index} { margin-right: percentage(@val); }
+  .make-grid(@class, (@index - 1)); //recursive
+}

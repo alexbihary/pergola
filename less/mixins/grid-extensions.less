@@ -1,0 +1,98 @@
+//grid extensions
+.make-grid-container(@max-width) {
+  max-width: @max-width;
+}
+
+.make-grid-padded(@gutter) {
+  > [class*='@{cell}'],
+  &.columns > * {
+    padding: @gutter;
+  }
+
+  > .row {
+    padding: @gutter 0;
+
+    > [class*='@{cell}'],
+    &.columns > * {
+      padding: 0 @gutter;
+      &:first-child { padding-left:  0; }
+      &:last-child  { padding-right: 0; }
+    }
+  }
+}
+
+.make-grid-divided(@gutter) {
+  > .row {
+    > [class*='@{cell}']:not(:first-child) {
+      border-left: @gutter solid rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+.make-grid-relaxed(@gutter) {
+  > .row:not(:first-child) {
+    border-top: @gutter solid rgba(255, 255, 255, 0.3);
+  }
+}
+
+.make-grid-celled(@gutter) {
+  > [class*='@{cell}'] {
+    border: @gutter solid rgba(255, 255, 255, 0.3);
+  }
+
+  > .row {
+    > [class*='@{cell}']:not(:first-child) {
+      border-left: @gutter solid rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  > .row:not(:first-child) {
+    border-top: @gutter solid rgba(255, 255, 255, 0.3);
+  }
+}
+
+.make-grid-sorted() {
+
+}
+
+.make-grid-stacked() {
+
+}
+
+.make-grid-striped() {
+
+  > .row:nth-of-type(odd) {
+    background: rgba(225, 225, 225, 1.0);
+  }
+  > .row:nth-of-type(even) {
+    background: transparent;
+  }
+
+  &.tinted {
+    > .row:nth-of-type(odd) {
+      background: rgba(255, 255, 255, 0.4);
+    }
+    > .row:nth-of-type(even) {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &.shaded {
+    > .row:nth-of-type(odd) {
+      background: rgba(0, 0, 0, 0.3);
+    }
+    > .row:nth-of-type(even) {
+      background: rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.make-grid-aligned(@alignment) {
+  vertical-align: @alignment;
+
+  > [class*='@{cell}'],
+  > .row > [class*='@{cell}'] {
+    vertical-align: @alignment;
+  }
+}
+

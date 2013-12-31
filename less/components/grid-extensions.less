@@ -1,0 +1,80 @@
+@import "../mixins/grid-extensions";
+
+@media @mq-xs {
+  @gutter: 2px;
+
+  .grid.container { .make-grid-container(@screen-max-width-xs); }
+  .grid.padded    { .make-grid-padded(@gutter);  }
+  .grid.divided   { .make-grid-divided(1px); }
+  .grid.celled    { .make-grid-celled(1px);  }
+  .grid.relaxed   { .make-grid-relaxed(1px); }
+  .grid.sorted    { .make-grid-sorted();  }
+  .grid.striped   { .make-grid-striped(); }
+  .grid.top.aligned { .make-grid-aligned(top); }
+  .grid.middle.aligned { .make-grid-aligned(middle); }
+  .grid.bottom.aligned { .make-grid-aligned(bottom); }
+  .grid.stacked   { .make-grid-stacked(); }
+
+  .grid.table {
+    display: table;
+
+    > [class*='@{cell}'] {
+      display: table-cell;
+    }
+
+    > .row {
+      display: table-row;
+
+      > [class*='@{cell}'] {
+        display: table-cell;
+      }
+    }
+  }
+  .grid > .row.table {
+    display: table;
+
+    > [class*='@{cell}'] {
+      display: table-cell;
+    }
+  }
+}
+@media @mq-sm {
+  @gutter: 3px;
+
+  .grid.container { .make-grid-container(@screen-max-width-sm); }
+  .grid.padded    { .make-grid-padded(@gutter);  }
+  //.grid.divided   { .make-grid-divided(@gutter); }
+  //.grid.celled    { .make-grid-celled(@gutter);  }
+  //.grid.relaxed   { .make-grid-relaxed(@gutter); }
+  .grid.sorted    { .make-grid-sorted();  }
+}
+@media @mq-md {
+  @gutter: 4px;
+
+  .grid.container { .make-grid-container(@screen-max-width-md); }
+  .grid.padded    { .make-grid-padded(@gutter);  }
+  .grid.divided   { .make-grid-divided(2px); }
+  .grid.celled    { .make-grid-celled(2px);  }
+  .grid.relaxed   { .make-grid-relaxed(2px); }
+  .grid.sorted    { .make-grid-sorted();  }
+}
+@media @mq-lg {
+  @gutter: 5px;
+
+  .grid.container { .make-grid-container(@screen-max-width-lg); }
+  .grid.padded    { .make-grid-padded(@gutter);  }
+  //.grid.divided   { .make-grid-divided(@gutter); }
+  //.grid.celled    { .make-grid-celled(@gutter);  }
+  //.grid.relaxed   { .make-grid-relaxed(@gutter); }
+  .grid.sorted    { .make-grid-sorted();  }
+}
+@media @mq-xl {
+  @gutter: 6px;
+
+  .grid.container { .make-grid-container(@screen-max-width-xl); }
+  .grid.padded    { .make-grid-padded(@gutter);  }
+  .grid.divided   { .make-grid-divided(3px); }
+  .grid.celled    { .make-grid-celled(3px);  }
+  .grid.relaxed   { .make-grid-relaxed(3px); }
+  .grid.sorted    { .make-grid-sorted();  }
+}
