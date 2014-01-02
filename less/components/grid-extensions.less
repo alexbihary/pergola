@@ -4,39 +4,18 @@
   @gutter: 2px;
 
   .grid.container { .make-grid-container(@screen-max-width-xs); }
-  .grid.padded    { .make-grid-padded(@gutter);  }
+  .grid.padded    { .make-grid-padded(@gutter); }
   .grid.divided   { .make-grid-divided(1px); }
   .grid.celled    { .make-grid-celled(1px);  }
   .grid.relaxed   { .make-grid-relaxed(1px); }
   .grid.sorted    { .make-grid-sorted();  }
   .grid.striped   { .make-grid-striped(); }
-  .grid.top.aligned { .make-grid-aligned(top); }
+  .grid.stacked   { .make-grid-stacked(); }
+  .grid.table     { .make-grid-table();   }
+  .grid.top.aligned    { .make-grid-aligned(top);    }
   .grid.middle.aligned { .make-grid-aligned(middle); }
   .grid.bottom.aligned { .make-grid-aligned(bottom); }
-  .grid.stacked   { .make-grid-stacked(); }
-
-  .grid.table {
-    display: table;
-
-    > [class*='@{cell}'] {
-      display: table-cell;
-    }
-
-    > .row {
-      display: table-row;
-
-      > [class*='@{cell}'] {
-        display: table-cell;
-      }
-    }
-  }
-  .grid > .row.table {
-    display: table;
-
-    > [class*='@{cell}'] {
-      display: table-cell;
-    }
-  }
+  
 }
 @media @mq-sm {
   @gutter: 3px;

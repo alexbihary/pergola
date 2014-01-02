@@ -52,6 +52,13 @@ module.exports = function(grunt) {
           hostname: 'localhost',
           base: '.'
         }
+      },
+      external: {
+        options: {
+          port: 4000,
+          hostname: '0.0.0.0',
+          base: '.'
+        }
       }
     },
 
@@ -162,7 +169,8 @@ module.exports = function(grunt) {
 
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
-  grunt.registerTask('dev', ['connect', 'open', 'watch']);
+  grunt.registerTask('dev-open', ['connect', 'open', 'watch']);
+  grunt.registerTask('dev', ['connect', 'watch']);
   grunt.registerTask('test', []);
   grunt.registerTask('dist-js', ['concat', 'uglify']);
   grunt.registerTask('dist-css', ['less', 'csscomb', 'csslint', 'usebanner']);

@@ -96,3 +96,19 @@
   }
 }
 
+.make-grid-table() {
+  display: table;
+
+  > [class*='@{cell}'] {
+    display: table-cell;
+  }
+  
+  > .row {
+    display: table-row;
+    
+    > [class*='@{cell}'] {
+      display: table-cell;
+    }
+  }
+}
+
