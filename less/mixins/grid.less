@@ -30,8 +30,8 @@
   }
 
 
-  .make-equal-columns(@n, @nword) {
-    .@{nword}.columns > * { width: percentage(round((1 / @n), @precision)); }
+  .make-equal-columns(@n, @num) {
+    .@{num}.columns > * { width: percentage(round((1 / @n), @precision)); }
   }
   .make-equal-columns(2, two);
   .make-equal-columns(3, three);
