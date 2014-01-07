@@ -1,10 +1,11 @@
 'use strict';
 
-(function(window, document, $, namespace, undefined) {
+(function(window, namespace, exe, undefined) {
 
-})(window, document, jQuery || Zepto, '_pergola', function(window, document, namespace, undefined) {
+	var $ = jQuery || Zepto;
 
-  var asd = { a: 1 };
+})(window, 'pergola', function(window, document, undefined) {
 
-  window[namespace] = asd;
+	return {};
+
 });
