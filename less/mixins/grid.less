@@ -15,15 +15,17 @@
     .clearfix();
   }
 
-  //cells and columns
+  //cells and columns, initialized to 100% width
   [class*='@{cell}'],
   .columns > * {
     display: inline-block;
     position: relative;
+    width: 100%;
     min-height: 1px;
     vertical-align: top; //req. once these were no longer floated
   }
 
+  .content,
   [class*='@{cell}']:not(.grid),
   .columns > *:not(.grid) {
     font-size: 1.0rem;
