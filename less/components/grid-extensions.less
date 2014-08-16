@@ -5,7 +5,7 @@
 
   .grid.container { .make-grid-container(@screen-max-width-xs); }
   .grid.padded    { .make-grid-padded(@gutter); }
-  .grid.divided   { .make-grid-divided(1px); }
+  .grid.divided   { .make-grid-divided(@gutter); }
   .grid.celled    { .make-grid-celled(1px);  }
   .grid.relaxed   { .make-grid-relaxed(1px); }
   .grid.sorted    { .make-grid-sorted();  }
@@ -15,7 +15,7 @@
   .grid.top.aligned    { .make-grid-aligned(top);    }
   .grid.middle.aligned { .make-grid-aligned(middle); }
   .grid.bottom.aligned { .make-grid-aligned(bottom); }
-  
+
 }
 @media @mq-sm {
   @gutter: 3px;
@@ -32,7 +32,7 @@
 
   .grid.container { .make-grid-container(@screen-max-width-md); }
   .grid.padded    { .make-grid-padded(@gutter);  }
-  .grid.divided   { .make-grid-divided(2px); }
+  .grid.divided   { .make-grid-divided(@gutter); }
   .grid.celled    { .make-grid-celled(2px);  }
   .grid.relaxed   { .make-grid-relaxed(2px); }
   .grid.sorted    { .make-grid-sorted();  }
@@ -52,7 +52,7 @@
 
   .grid.container { .make-grid-container(@screen-max-width-xl); }
   .grid.padded    { .make-grid-padded(@gutter);  }
-  .grid.divided   { .make-grid-divided(3px); }
+  .grid.divided   { .make-grid-divided(@gutter); }
   .grid.celled    { .make-grid-celled(3px);  }
   .grid.relaxed   { .make-grid-relaxed(3px); }
   .grid.sorted    { .make-grid-sorted();  }
