@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pergola</title>
+    <link rel="stylesheet" href="../dist/css/pergola.min.css" />
+    <style>
+    .demo {
+        background-color: #933;
+        color: #fff;
+    }
+    .demo > * {
+        background-color: #fcc;
+        text-align: center;
+    }
+    .demo-content {
+        background-color: #933;
+    }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid container">
+
+      <div class="content">
+        <h1>Celled Grid</h1>
+        <code>div.grid.celled.demo>div.sm-cell-3*12>div.demo-content{$}</code>
+      </div>
+      <div class="grid celled demo">
+          <div class="sm-cell-3">
+              <div class="demo-content">1</div>
+          </div>
+          <div class="sm-cell-3">
+              <div class="demo-content">2</div>
+          </div>
+          <div class="sm-cell-3">
+              <div class="demo-content">3</div>
+          </div>
+          <div class="sm-cell-3">
+              <div class="demo-content">4</div>
+          </div>
+          <div class="sm-cell-3">
+              <div class="demo-content">5</div>
+          </div>
+          <div class="sm-cell-3">
+              <div class="demo-content">6</div>
+          </div>
+          <div class="sm-cell-3">
+              <div class="demo-content">7</div>
+          </div>
+          <div class="sm-cell-3">
+              <div class="demo-content">8</div>
+          </div>
+          <div class="sm-cell-3">
+              <div class="demo-content">9</div>
+          </div>
+          <div class="sm-cell-3">
+              <div class="demo-content">10</div>
+          </div>
+          <div class="sm-cell-3">
+              <div class="demo-content">11</div>
+          </div>
+          <div class="sm-cell-3">
+              <div class="demo-content">12</div>
+          </div>
+      </div>
+
+      <div class="content">
+        <h1>Celled Grid with rows</h1>
+        <code>div.grid.celled.demo>div.row*3>div.sm-cell-3*4>div.demo-content{$}</code>
+      </div>
+      <div class="grid celled demo">
+          <div class="row">
+              <div class="sm-cell-3">
+                  <div class="demo-content">1</div>
+              </div>
+              <div class="sm-cell-3">
+                  <div class="demo-content">2</div>
+              </div>
+              <div class="sm-cell-3">
+                  <div class="demo-content">3</div>
+              </div>
+              <div class="sm-cell-3">
+                  <div class="demo-content">4</div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="sm-cell-3">
+                  <div class="demo-content">1</div>
+              </div>
+              <div class="sm-cell-3">
+                  <div class="demo-content">2</div>
+              </div>
+              <div class="sm-cell-3">
+                  <div class="demo-content">3</div>
+              </div>
+              <div class="sm-cell-3">
+                  <div class="demo-content">4</div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="sm-cell-3">
+                  <div class="demo-content">1</div>
+              </div>
+              <div class="sm-cell-3">
+                  <div class="demo-content">2</div>
+              </div>
+              <div class="sm-cell-3">
+                  <div class="demo-content">3</div>
+              </div>
+              <div class="sm-cell-3">
+                  <div class="demo-content">4</div>
+              </div>
+          </div>
+      </div>
+
+      <div class="content">
+        <h1>Padded Grid with inner Celled Grids</h1>
+        <code>div.grid.padded.demo>div.row>div.md-cell-4.grid.celled*3>div.sm-cell-3*12>div.demo-content{$}</code>
+      </div>
+      <div class="grid padded demo">
+          <div class="row">
+              <div class="md-cell-4 grid celled">
+                  <div class="sm-cell-3">
+                      <div class="demo-content">1</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">2</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">3</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">4</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">5</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">6</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">7</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">8</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">9</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">10</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">11</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">12</div>
+                  </div>
+              </div>
+              <div class="md-cell-4 grid celled">
+                  <div class="sm-cell-3">
+                      <div class="demo-content">1</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">2</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">3</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">4</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">5</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">6</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">7</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">8</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">9</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">10</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">11</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">12</div>
+                  </div>
+              </div>
+              <div class="md-cell-4 grid celled">
+                  <div class="sm-cell-3">
+                      <div class="demo-content">1</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">2</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">3</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">4</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">5</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">6</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">7</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">8</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">9</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">10</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">11</div>
+                  </div>
+                  <div class="sm-cell-3">
+                      <div class="demo-content">12</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <hr class="content">
+    </div>
+</body>
+</html>

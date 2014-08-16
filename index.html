@@ -4,10 +4,190 @@
   <meta charset="UTF-8">
   <title>Pergola</title>
   <link rel="stylesheet" href="dist/css/pergola.min.css" />
+  <style>
+    .demo {
+      background-color: #933;
+      color: #fff;
+    }
+    .demo > * {
+      background-color: #555;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <h1>Hello! -- from Pergola</h1>
 
+  <div class="grid divided demo">
+    <div class="row">
+      <div class="md-cell-3">1</div>
+      <div class="md-cell-3">2</div>
+      <div class="md-cell-3">3</div>
+      <div class="md-cell-3">4</div>
+    </div>
+    <div class="row">
+      <div class="md-cell-3">1</div>
+      <div class="md-cell-3">2</div>
+      <div class="md-cell-3">3</div>
+      <div class="md-cell-3">4</div>
+    </div>
+    <div class="row">
+      <div class="md-cell-3">1</div>
+      <div class="md-cell-3">2</div>
+      <div class="md-cell-3">3</div>
+      <div class="md-cell-3">4</div>
+    </div>
+  </div>
+
+  <!--
+  <div class="grid padded">
+    <div class="xs-cell-1">
+      <div class="demo">1</div>
+    </div>
+    <div class="xs-cell-1">
+      <div class="demo">2</div>
+    </div>
+    <div class="xs-cell-1">
+      <div class="demo">3</div>
+    </div>
+    <div class="xs-cell-1">
+      <div class="demo">4</div>
+    </div>
+    <div class="xs-cell-1">
+      <div class="demo">5</div>
+    </div>
+    <div class="xs-cell-1">
+      <div class="demo">6</div>
+    </div>
+    <div class="xs-cell-1">
+      <div class="demo">7</div>
+    </div>
+    <div class="xs-cell-1">
+      <div class="demo">8</div>
+    </div>
+    <div class="xs-cell-1">
+      <div class="demo">9</div>
+    </div>
+    <div class="xs-cell-1">
+      <div class="demo">10</div>
+    </div>
+    <div class="xs-cell-1">
+      <div class="demo">11</div>
+    </div>
+    <div class="xs-cell-1">
+      <div class="demo">12</div>
+    </div>
+    <div class="xs-cell-2">
+      <div class="demo">1</div>
+    </div>
+    <div class="xs-cell-2">
+      <div class="demo">2</div>
+    </div>
+    <div class="xs-cell-2">
+      <div class="demo">3</div>
+    </div>
+    <div class="xs-cell-2">
+      <div class="demo">4</div>
+    </div>
+    <div class="xs-cell-2">
+      <div class="demo">5</div>
+    </div>
+    <div class="xs-cell-2">
+      <div class="demo">6</div>
+    </div>
+    <div class="xs-cell-3">
+      <div class="demo">1</div>
+    </div>
+    <div class="xs-cell-3">
+      <div class="demo">2</div>
+    </div>
+    <div class="xs-cell-3">
+      <div class="demo">3</div>
+    </div>
+    <div class="xs-cell-3">
+      <div class="demo">4</div>
+    </div>
+    <div class="xs-cell-4">
+      <div class="demo">1</div>
+    </div>
+    <div class="xs-cell-4">
+      <div class="demo">2</div>
+    </div>
+    <div class="xs-cell-4">
+      <div class="demo">3</div>
+    </div>
+    <div class="xs-cell-6">
+      <div class="demo">1</div>
+    </div>
+    <div class="xs-cell-6">
+      <div class="demo">2</div>
+    </div>
+    <div class="xs-cell-6">
+      <div class="demo">1</div>
+    </div>
+    <div class="xs-cell-6">
+      <div class="demo">2</div>
+    </div>
+    <div class="xs-cell-12">
+      <div class="demo">1</div>
+    </div>
+  </div>
+
+
+  <div class="grid padded celled demo">
+    <div class="md-cell-3">1</div>
+    <div class="md-cell-3">2</div>
+    <div class="md-cell-3">3</div>
+    <div class="md-cell-3">4</div>
+    <div class="md-cell-3">5</div>
+    <div class="md-cell-3">6</div>
+    <div class="md-cell-3">7</div>
+    <div class="md-cell-3">8</div>
+    <div class="md-cell-3">9</div>
+    <div class="md-cell-3">10</div>
+    <div class="md-cell-3">11</div>
+    <div class="md-cell-3">12</div>
+  </div>
+  <hr>
+  <div class="grid padded demo">
+    <div class="md-cell-4">1</div>
+    <div class="md-cell-4">2</div>
+    <div class="md-cell-4">3</div>
+    <div class="md-cell-4">4</div>
+    <div class="md-cell-4">5</div>
+    <div class="md-cell-4">6</div>
+    <div class="md-cell-4">7</div>
+    <div class="md-cell-4">8</div>
+    <div class="md-cell-4">9</div>
+    <div class="md-cell-4">10</div>
+    <div class="md-cell-4">11</div>
+    <div class="md-cell-4">12</div>
+  </div>
+  <hr>
+  <div class="grid container two columns demo">
+    <div class="grid two columns">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, repellat vel quas asperiores ut, optio, quaerat impedit numquam amet quod velit culpa ducimus a deleniti.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, voluptates natus veniam illum perferendis. Ea ad cumque, commodi hic. Suscipit autem nostrum molestiae sunt atque?</p>
+    </div>
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque sunt maxime impedit reprehenderit aspernatur incidunt consectetur ut deserunt quisquam atque est asperiores, ipsum iusto in molestiae, error nam. Iste distinctio, nobis dolorum magnam assumenda deleniti?</p>
+      <div class="grid two columns">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint blanditiis reprehenderit ad delectus, dolores, ullam!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus necessitatibus dolores cumque illum amet, itaque, ducimus cupiditate deleniti, iusto suscipit velit aspernatur?</p>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="grid container seven columns demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+  </div>
+  -->
   <section id="scripts">
     <script src="dist/js/pergola.min.js"></script>
   </section>
