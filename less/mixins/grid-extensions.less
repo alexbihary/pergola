@@ -1,8 +1,19 @@
 //grid extensions
+
+/* Grid Container
+ * --------------
+ * Limits grid width to a given max-width.
+ * By default, grids are 100% width of the parent.
+ */
 .make-grid-container(@max-width) {
   max-width: @max-width;
 }
 
+/* Padded Grid
+ * -----------
+ * Adds padding to cells or columns.
+ * Adds top/bottom padding to rows and adds left/right padding to cells within rows.
+ */
 .make-grid-padded(@gutter) {
   > [class*='@{cell}'],
   &.columns > * {
@@ -10,39 +21,60 @@
   }
 
   > .row {
-    padding: @gutter 0;
+    padding: @gutter / 2;
 
     > [class*='@{cell}'],
     &.columns > * {
-      padding: 0 @gutter;
-      &:first-child { padding-left:  0; }
-      &:last-child  { padding-right: 0; }
+      padding: @gutter / 2;
+      //&:first-child { padding-left:  0; }
+      //&:last-child  { padding-right: 0; }
     }
   }
 }
 
+/* Divided Grid
+ * ------------
+ * Adds left/right border to cells.
+ */
 .make-grid-divided(@gutter) {
+  > [class*='@{cell}'] {
+    border-left: (@gutter / 2) solid rgba(255, 255, 255, 0.3);
+    border-right: (@gutter / 2) solid rgba(255, 255, 255, 0.3);
+  }
+
   > .row {
-    > [class*='@{cell}']:not(:first-child) {
-      border-left: @gutter solid rgba(255, 255, 255, 0.3);
+    //> [class*='@{cell}']:not(:first-child) {
+    > [class*='@{cell}'] { // + [class*='@{cell}'] {
+      border-left: (@gutter / 2) solid rgba(255, 255, 255, 0.3);
+      border-right: (@gutter / 2) solid rgba(255, 255, 255, 0.3);
     }
   }
 }
 
+/* Relaxed Grid
+ * ------------
+ * Adds spacing between rows.
+ * Rows required for effect.
+ */
 .make-grid-relaxed(@gutter) {
   > .row:not(:first-child) {
     border-top: @gutter solid rgba(255, 255, 255, 0.3);
   }
 }
 
+/* Celled Grid
+ * -----------
+ * Adds spacing between cells by adding a border around each cell.
+ */
 .make-grid-celled(@gutter) {
   > [class*='@{cell}'] {
     border: @gutter solid rgba(255, 255, 255, 0.3);
   }
 
   > .row {
-    > [class*='@{cell}']:not(:first-child) {
-      border-left: @gutter solid rgba(255, 255, 255, 0.3);
+    > [class*='@{cell}'] {
+      border-left: (@gutter / 2) solid rgba(255, 255, 255, 0.3);
+      border-right: (@gutter / 2) solid rgba(255, 255, 255, 0.3);
     }
   }
 
@@ -102,10 +134,10 @@
   > [class*='@{cell}'] {
     display: table-cell;
   }
-  
+
   > .row {
     display: table-row;
-    
+
     > [class*='@{cell}'] {
       display: table-cell;
     }
