@@ -1,0 +1,12 @@
+.text-align(@prefix: ~'') {
+	@pre: ~'';
+	.fixPrefix() when not (@prefix = ~'') {
+		@pre: ~'@{prefix}-';
+	}
+	.fixPrefix();
+
+	.@{pre}text-left    { text-align: left;    }
+	.@{pre}text-right   { text-align: right;   }
+	.@{pre}text-center  { text-align: center;  }
+	.@{pre}text-justify { text-align: justify; }
+}

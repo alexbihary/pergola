@@ -1,13 +1,20 @@
 @import "../mixins/utilities";
+@import "../mixins/text-align";
 
+.make-float-classes();
 
-.left  { float: left;  }
-.right { float: right; }
-
-.text-left    { text-align: left;    }
-.text-right   { text-align: right;   }
-.text-center  { text-align: center;  }
-.text-justify { text-align: justify; }
+// responsive text-align
+.text-align();
+@media @mq-xs { .text-align(@xs); }
+@media @mq-sm { .text-align(@sm); }
+@media @mq-md { .text-align(@md); }
+@media @mq-lg { .text-align(@lg); }
+@media @mq-xl { .text-align(@xl); }
+@media @mq-xs-only { .text-align(~'@{xs}-only'); }
+@media @mq-sm-only { .text-align(~'@{sm}-only'); }
+@media @mq-md-only { .text-align(~'@{md}-only'); }
+@media @mq-lg-only { .text-align(~'@{lg}-only'); }
+@media @mq-xl-only { .text-align(~'@{xl}-only'); }
 
 .divider {
   .make-divider();
