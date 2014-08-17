@@ -1,0 +1,338 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pergola</title>
+    <link rel="stylesheet" href="../dist/css/pergola.min.css" />
+    <style>
+    .demo {
+        background-color: #933;
+        color: #fff;
+    }
+    .demo > * {
+        background-color: #fcc;
+        text-align: center;
+    }
+    .demo-content {
+        background-color: #933;
+    }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid container">
+
+      <div class="content">
+        <h1>X-Padded Grid with cells</h1>
+        <code>div.grid.xpad.demo>div.sm-cell-3*12>div.demo-content{$}</code>
+      </div>
+      <div class="grid xpad demo">
+        <div class="sm-cell-3">
+          <div class="demo-content">1</div>
+        </div>
+        <div class="sm-cell-3">
+          <div class="demo-content">2</div>
+        </div>
+        <div class="sm-cell-3">
+          <div class="demo-content">3</div>
+        </div>
+        <div class="sm-cell-3">
+          <div class="demo-content">4</div>
+        </div>
+        <div class="sm-cell-3">
+          <div class="demo-content">5</div>
+        </div>
+        <div class="sm-cell-3">
+          <div class="demo-content">6</div>
+        </div>
+        <div class="sm-cell-3">
+          <div class="demo-content">7</div>
+        </div>
+        <div class="sm-cell-3">
+          <div class="demo-content">8</div>
+        </div>
+        <div class="sm-cell-3">
+          <div class="demo-content">9</div>
+        </div>
+        <div class="sm-cell-3">
+          <div class="demo-content">10</div>
+        </div>
+        <div class="sm-cell-3">
+          <div class="demo-content">11</div>
+        </div>
+        <div class="sm-cell-3">
+          <div class="demo-content">12</div>
+        </div>
+      </div>
+
+      <div class="content">
+        <h1>X-Padded Grid with rows of cells</h1>
+        <code>div.grid.xpad.demo>div.row*3>div.sm-cell-3*4>div.demo-content{$}</code>
+      </div>
+      <div class="grid xpad demo">
+        <div class="row">
+          <div class="sm-cell-3">
+            <div class="demo-content">1</div>
+          </div>
+          <div class="sm-cell-3">
+            <div class="demo-content">2</div>
+          </div>
+          <div class="sm-cell-3">
+            <div class="demo-content">3</div>
+          </div>
+          <div class="sm-cell-3">
+            <div class="demo-content">4</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="sm-cell-3">
+            <div class="demo-content">1</div>
+          </div>
+          <div class="sm-cell-3">
+            <div class="demo-content">2</div>
+          </div>
+          <div class="sm-cell-3">
+            <div class="demo-content">3</div>
+          </div>
+          <div class="sm-cell-3">
+            <div class="demo-content">4</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="sm-cell-3">
+            <div class="demo-content">1</div>
+          </div>
+          <div class="sm-cell-3">
+            <div class="demo-content">2</div>
+          </div>
+          <div class="sm-cell-3">
+            <div class="demo-content">3</div>
+          </div>
+          <div class="sm-cell-3">
+            <div class="demo-content">4</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <h1>X-Padded cells, each with an X-Padded Grid of cells</h1>
+        <code>div.grid.xpad.demo>div.md-cell-3.grid.xpad*12>div.sm-cell-6*2>div.demo-content{$}</code>
+      </div>
+      <div class="grid xpad demo">
+        <div class="md-cell-3 grid xpad">
+          <div class="sm-cell-6">
+            <div class="demo-content">1</div>
+          </div>
+          <div class="sm-cell-6">
+            <div class="demo-content">2</div>
+          </div>
+        </div>
+        <div class="md-cell-3 grid xpad">
+          <div class="sm-cell-6">
+            <div class="demo-content">1</div>
+          </div>
+          <div class="sm-cell-6">
+            <div class="demo-content">2</div>
+          </div>
+        </div>
+        <div class="md-cell-3 grid xpad">
+          <div class="sm-cell-6">
+            <div class="demo-content">1</div>
+          </div>
+          <div class="sm-cell-6">
+            <div class="demo-content">2</div>
+          </div>
+        </div>
+        <div class="md-cell-3 grid xpad">
+          <div class="sm-cell-6">
+            <div class="demo-content">1</div>
+          </div>
+          <div class="sm-cell-6">
+            <div class="demo-content">2</div>
+          </div>
+        </div>
+        <div class="md-cell-3 grid xpad">
+          <div class="sm-cell-6">
+            <div class="demo-content">1</div>
+          </div>
+          <div class="sm-cell-6">
+            <div class="demo-content">2</div>
+          </div>
+        </div>
+        <div class="md-cell-3 grid xpad">
+          <div class="sm-cell-6">
+            <div class="demo-content">1</div>
+          </div>
+          <div class="sm-cell-6">
+            <div class="demo-content">2</div>
+          </div>
+        </div>
+        <div class="md-cell-3 grid xpad">
+          <div class="sm-cell-6">
+            <div class="demo-content">1</div>
+          </div>
+          <div class="sm-cell-6">
+            <div class="demo-content">2</div>
+          </div>
+        </div>
+        <div class="md-cell-3 grid xpad">
+          <div class="sm-cell-6">
+            <div class="demo-content">1</div>
+          </div>
+          <div class="sm-cell-6">
+            <div class="demo-content">2</div>
+          </div>
+        </div>
+        <div class="md-cell-3 grid xpad">
+          <div class="sm-cell-6">
+            <div class="demo-content">1</div>
+          </div>
+          <div class="sm-cell-6">
+            <div class="demo-content">2</div>
+          </div>
+        </div>
+        <div class="md-cell-3 grid xpad">
+          <div class="sm-cell-6">
+            <div class="demo-content">1</div>
+          </div>
+          <div class="sm-cell-6">
+            <div class="demo-content">2</div>
+          </div>
+        </div>
+        <div class="md-cell-3 grid xpad">
+          <div class="sm-cell-6">
+            <div class="demo-content">1</div>
+          </div>
+          <div class="sm-cell-6">
+            <div class="demo-content">2</div>
+          </div>
+        </div>
+        <div class="md-cell-3 grid xpad">
+          <div class="sm-cell-6">
+            <div class="demo-content">1</div>
+          </div>
+          <div class="sm-cell-6">
+            <div class="demo-content">2</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <h1>X-Padded rows, each with an X-Padded Grid of cells</h1>
+        <code>div.grid.xpad.demo>div.row*3>div.md-cell-3.grid.xpad*4>div.sm-cell-6*2>div.demo-content{$}</code>
+      </div>
+      <div class="grid xpad demo">
+        <div class="row">
+          <div class="md-cell-3 grid xpad">
+            <div class="sm-cell-6">
+              <div class="demo-content">1</div>
+            </div>
+            <div class="sm-cell-6">
+              <div class="demo-content">2</div>
+            </div>
+          </div>
+          <div class="md-cell-3 grid xpad">
+            <div class="sm-cell-6">
+              <div class="demo-content">1</div>
+            </div>
+            <div class="sm-cell-6">
+              <div class="demo-content">2</div>
+            </div>
+          </div>
+          <div class="md-cell-3 grid xpad">
+            <div class="sm-cell-6">
+              <div class="demo-content">1</div>
+            </div>
+            <div class="sm-cell-6">
+              <div class="demo-content">2</div>
+            </div>
+          </div>
+          <div class="md-cell-3 grid xpad">
+            <div class="sm-cell-6">
+              <div class="demo-content">1</div>
+            </div>
+            <div class="sm-cell-6">
+              <div class="demo-content">2</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="md-cell-3 grid xpad">
+            <div class="sm-cell-6">
+              <div class="demo-content">1</div>
+            </div>
+            <div class="sm-cell-6">
+              <div class="demo-content">2</div>
+            </div>
+          </div>
+          <div class="md-cell-3 grid xpad">
+            <div class="sm-cell-6">
+              <div class="demo-content">1</div>
+            </div>
+            <div class="sm-cell-6">
+              <div class="demo-content">2</div>
+            </div>
+          </div>
+          <div class="md-cell-3 grid xpad">
+            <div class="sm-cell-6">
+              <div class="demo-content">1</div>
+            </div>
+            <div class="sm-cell-6">
+              <div class="demo-content">2</div>
+            </div>
+          </div>
+          <div class="md-cell-3 grid xpad">
+            <div class="sm-cell-6">
+              <div class="demo-content">1</div>
+            </div>
+            <div class="sm-cell-6">
+              <div class="demo-content">2</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="md-cell-3 grid xpad">
+            <div class="sm-cell-6">
+              <div class="demo-content">1</div>
+            </div>
+            <div class="sm-cell-6">
+              <div class="demo-content">2</div>
+            </div>
+          </div>
+          <div class="md-cell-3 grid xpad">
+            <div class="sm-cell-6">
+              <div class="demo-content">1</div>
+            </div>
+            <div class="sm-cell-6">
+              <div class="demo-content">2</div>
+            </div>
+          </div>
+          <div class="md-cell-3 grid xpad">
+            <div class="sm-cell-6">
+              <div class="demo-content">1</div>
+            </div>
+            <div class="sm-cell-6">
+              <div class="demo-content">2</div>
+            </div>
+          </div>
+          <div class="md-cell-3 grid xpad">
+            <div class="sm-cell-6">
+              <div class="demo-content">1</div>
+            </div>
+            <div class="sm-cell-6">
+              <div class="demo-content">2</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="content">
+
+    </div>
+
+
+</body>
+
+</html>

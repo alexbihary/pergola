@@ -32,6 +32,37 @@
   }
 }
 
+
+
+.make-grid-padding(@gutter; @xy) {
+
+  .padding(@pad; @x) when (@x = x) {
+    padding-right: @pad;
+    padding-left: @pad;
+  }
+  .padding(@pad; @y) when (@y = y) {
+    padding-top: @pad;
+    padding-bottom: @pad;
+  }
+  .padding(@pad; @xy) when(@xy = xy) {
+    padding: @pad;
+  }
+
+  > [class*='@{cell}'],
+  &.columns > * {
+    .padding(@gutter, @xy);
+  }
+
+  > .row {
+    .padding(@gutter / 2, @xy);
+
+    > [class*='@{cell}'],
+    &.columns > * {
+      .padding(@gutter / 2, @xy);
+    }
+  }
+}
+
 /* Divided Grid
  * ------------
  * Adds left/right border to cells.

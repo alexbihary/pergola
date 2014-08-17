@@ -4,7 +4,10 @@
   @gutter: 2px;
 
   .grid.container { .make-grid-container(@screen-max-width-xs); }
-  .grid.padded    { .make-grid-padded(@gutter); }
+  .grid.padded    { .make-grid-padding(@gutter, xy); }
+  .grid.xpad      { .make-grid-padding(@gutter, x);  }
+  .grid.ypad      { .make-grid-padding(@gutter, y);  }
+
   .grid.divided   { .make-grid-divided(@gutter); }
   .grid.celled    { .make-grid-celled(1px);  }
   .grid.relaxed   { .make-grid-relaxed(1px); }
@@ -21,7 +24,9 @@
   @gutter: 3px;
 
   .grid.container { .make-grid-container(@screen-max-width-sm); }
-  .grid.padded    { .make-grid-padded(@gutter);  }
+  .grid.padded    { .make-grid-padding(@gutter, xy); }
+  .grid.xpad      { .make-grid-padding(@gutter, x);  }
+  .grid.ypad      { .make-grid-padding(@gutter, y);  }
   //.grid.divided   { .make-grid-divided(@gutter); }
   //.grid.celled    { .make-grid-celled(@gutter);  }
   //.grid.relaxed   { .make-grid-relaxed(@gutter); }
@@ -31,7 +36,9 @@
   @gutter: 4px;
 
   .grid.container { .make-grid-container(@screen-max-width-md); }
-  .grid.padded    { .make-grid-padded(@gutter);  }
+  .grid.padded    { .make-grid-padding(@gutter, xy); }
+  .grid.xpad      { .make-grid-padding(@gutter, x);  }
+  .grid.ypad      { .make-grid-padding(@gutter, y);  }
   .grid.divided   { .make-grid-divided(@gutter); }
   .grid.celled    { .make-grid-celled(2px);  }
   .grid.relaxed   { .make-grid-relaxed(2px); }
@@ -41,7 +48,9 @@
   @gutter: 5px;
 
   .grid.container { .make-grid-container(@screen-max-width-lg); }
-  .grid.padded    { .make-grid-padded(@gutter);  }
+  .grid.padded    { .make-grid-padding(@gutter, xy); }
+  .grid.xpad      { .make-grid-padding(@gutter, x);  }
+  .grid.ypad      { .make-grid-padding(@gutter, y);  }
   //.grid.divided   { .make-grid-divided(@gutter); }
   //.grid.celled    { .make-grid-celled(@gutter);  }
   //.grid.relaxed   { .make-grid-relaxed(@gutter); }
@@ -51,7 +60,9 @@
   @gutter: 6px;
 
   .grid.container { .make-grid-container(@screen-max-width-xl); }
-  .grid.padded    { .make-grid-padded(@gutter);  }
+  .grid.padded    { .make-grid-padding(@gutter, xy); }
+  .grid.xpad      { .make-grid-padding(@gutter, x);  }
+  .grid.ypad      { .make-grid-padding(@gutter, y);  }
   .grid.divided   { .make-grid-divided(@gutter); }
   .grid.celled    { .make-grid-celled(3px);  }
   .grid.relaxed   { .make-grid-relaxed(3px); }
