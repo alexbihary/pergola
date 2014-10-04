@@ -64,7 +64,8 @@
 //pull
 .make-grid(@part; @class; @index; @precision: @precision) when (@index > 0) and (@part = @pull) {
   @val: round((@index / @grid-columns), @precision);
-  .@{class}@{pull}@{index} { left: percentage(-@val); }
+  @pct: percentage(@val);
+  .@{class}@{pull}@{index} { left: -@pct; }
   .make-grid(@part; @class; (@index - 1)); //recursive
 }
 //prefix

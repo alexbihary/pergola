@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         stripBanners: false
       },
       pergola: {
-        src: 'js/*.js',
+        src: 'src/scripts/**/*.js',
         dest: 'dist/js/<%= pkg.name %>.js'
       }
     },
@@ -63,8 +63,8 @@ module.exports = function(grunt) {
     },
 
     jshint: {
-      options: 'js/.jshintrc',
-      files: ['Gruntfile.js', 'js/**/*.js']
+      options: '.jshintrc',
+      files: ['Gruntfile.js', 'src/scripts/**/*.js']
     },
 
     less: {
@@ -81,41 +81,13 @@ module.exports = function(grunt) {
         }
       },
 
-      mobile: {
-        options: {
-          strictMath: true,
-          sourceMap: true,
-          outputSourceFiles: true,
-          sourceMapURL: '<%= pkg.name %>-mobile.css.map',
-          sourceMapFilename: 'dist/css/<%= pkg.name %>-mobile.css.map'
-        },
-        files: {
-          'dist/css/<%= pkg.name %>-mobile.css': 'less/pergola-build-mobile.less'
-        }
-      },
-
-      desktop: {
-        options: {
-          strictMath: true,
-          sourceMap: true,
-          outputSourceFiles: true,
-          sourceMapURL: '<%= pkg.name %>-desktop.css.map',
-          sourceMapFilename: 'dist/css/<%= pkg.name %>-desktop.css.map'
-        },
-        files: {
-          'dist/css/<%= pkg.name %>-desktop.css': 'less/pergola-build-desktop.less'
-        }
-      },
-
       minify: {
         options: {
           cleancss: true,
           report: 'min'
         },
         files: {
-          'dist/css/<%= pkg.name %>.min.css': 'dist/css/<%= pkg.name %>.css',
-          'dist/css/<%= pkg.name %>-mobile.min.css': 'dist/css/<%= pkg.name %>-mobile.css',
-          'dist/css/<%= pkg.name %>-desktop.min.css': 'dist/css/<%= pkg.name %>-desktop.css'
+          'dist/css/<%= pkg.name %>.min.css': 'dist/css/<%= pkg.name %>.css'
         }
       }
     },
@@ -154,7 +126,7 @@ module.exports = function(grunt) {
         livereload: true
       },
       js: {
-        files: 'js/**/*.js',
+        files: 'src/scripts/**/*.js',
         tasks: ['clean:js', 'dist-js']
       },
       less: {

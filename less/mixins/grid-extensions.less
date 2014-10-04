@@ -20,12 +20,13 @@
     padding: @gutter;
   }
 
+  @half-gutter: (@gutter / 2);
   > .row {
-    padding: @gutter / 2;
+    padding: @half-gutter;
 
     > [class*='@{cell}'],
     &.columns > * {
-      padding: @gutter / 2;
+      padding: @half-gutter;
       //&:first-child { padding-left:  0; }
       //&:last-child  { padding-right: 0; }
     }
@@ -53,12 +54,13 @@
     .padding(@gutter, @xy);
   }
 
+  @half-gutter: (@gutter / 2);
   > .row {
-    .padding(@gutter / 2, @xy);
+    .padding(@half-gutter, @xy);
 
     > [class*='@{cell}'],
     &.columns > * {
-      .padding(@gutter / 2, @xy);
+      .padding(@half-gutter, @xy);
     }
   }
 }
