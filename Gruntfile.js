@@ -70,16 +70,19 @@ module.exports = function(grunt) {
     less: {
       all: {
         options: {
-          strictMath: true,
-          sourceMap: true,
-          outputSourceFiles: true,
-          sourceMapURL: '<%= pkg.name %>.css.map',
-          sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
+          strictMath: true//,
+          //sourceMap: true,
+          //outputSourceFiles: true,
+          //sourceMapURL: '<%= pkg.name %>.css.map',
+          //sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
         },
         files: {
-          'dist/css/<%= pkg.name %>.css': 'less/pergola-build.less'
+          'dist/css/<%= pkg.name %>.css': 'less/pergola-build.less',
+          'dist/css/<%= pkg.name %>-modules.css': 'less/pergola-modules-build.less'
         }
       },
+
+
 
       minify: {
         options: {
@@ -87,7 +90,8 @@ module.exports = function(grunt) {
           report: 'min'
         },
         files: {
-          'dist/css/<%= pkg.name %>.min.css': 'dist/css/<%= pkg.name %>.css'
+          'dist/css/<%= pkg.name %>.min.css': 'dist/css/<%= pkg.name %>.css',
+          'dist/css/<%= pkg.name %>-modules.min.css': 'dist/css/<%= pkg.name %>-modules.css'
         }
       }
     },
