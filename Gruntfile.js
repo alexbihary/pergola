@@ -78,7 +78,7 @@ module.exports = function(grunt) {
         },
         files: {
           'dist/css/<%= pkg.name %>.css': 'less/pergola-build.less',
-          'dist/css/<%= pkg.name %>-modules.css': 'less/pergola-modules-build.less'
+          'dist/css/<%= pkg.name %>-modules.css': 'less/pergola-am-build.less'
         }
       },
 

@@ -1,0 +1,174 @@
+//grid extensions
+
+/* Grid Container
+ * --------------
+ * Limits grid width to a given width.
+ * By default, grids are 100% width of the parent.
+ */
+.make-grid-container-base(@am) {
+  [@{am}~=container] {
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 100%;
+  }
+}
+.make-grid-container(@am; @width) {
+  [@{am}~=container] {
+    width: @width;
+  }
+}
+
+/* Padded Grid
+ * -----------
+ * Adds padding to cells or columns.
+ * Adds top/bottom padding to rows and adds left/right padding to cells within rows.
+ */
+.make-grid-padded(@grid; @cols; @class; @gutter; @xy) {
+
+  .padding(@pad; @x) when (@x = x) {
+    padding-right: @pad;
+    padding-left: @pad;
+  }
+  .padding(@pad; @y) when (@y = y) {
+    padding-top: @pad;
+    padding-bottom: @pad;
+  }
+  .padding(@pad; @xy) when(@xy = xy) {
+    padding: @pad;
+  }
+
+  @half-gutter: (@gutter / 2);
+
+  [@{grid}~=@{class}] {
+    .padding(@half-gutter, @xy);
+  }
+
+  [@{grid}~=@{class}] > [@{cols}] /*, &.columns > * */ {
+    .padding(@half-gutter, @xy);
+  }
+
+
+  /*
+  > .row {
+    .padding(@half-gutter, @xy);
+
+    > [class*='@{cell}'],
+    &.columns > * {
+      .padding(@half-gutter, @xy);
+    }
+  }
+  */
+}
+
+/* Divided Grid
+ * ------------
+ * Adds left/right border to cells.
+ */
+.make-grid-divided(@gutter) {
+  > [class*='@{cell}'] {
+    border-left: (@gutter / 2) solid rgba(255, 255, 255, 0.3);
+    border-right: (@gutter / 2) solid rgba(255, 255, 255, 0.3);
+  }
+
+  > .row {
+    //> [class*='@{cell}']:not(:first-child) {
+    > [class*='@{cell}'] { // + [class*='@{cell}'] {
+      border-left: (@gutter / 2) solid rgba(255, 255, 255, 0.3);
+      border-right: (@gutter / 2) solid rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+/* Relaxed Grid
+ * ------------
+ * Adds spacing between rows.
+ * Rows required for effect.
+ */
+.make-grid-relaxed(@gutter) {
+  > .row:not(:first-child) {
+    border-top: @gutter solid rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Celled Grid
+ * -----------
+ * Adds spacing between cells by adding a border around each cell.
+ */
+.make-grid-celled(@gutter) {
+  > [class*='@{cell}'] {
+    border: @gutter solid rgba(255, 255, 255, 0.3);
+  }
+
+  > .row {
+    > [class*='@{cell}'] {
+      border-left: (@gutter / 2) solid rgba(255, 255, 255, 0.3);
+      border-right: (@gutter / 2) solid rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  > .row:not(:first-child) {
+    border-top: @gutter solid rgba(255, 255, 255, 0.3);
+  }
+}
+
+.make-grid-sorted() {
+
+}
+
+.make-grid-stacked() {
+
+}
+
+.make-grid-striped() {
+
+  > .row:nth-of-type(odd) {
+    background: rgba(225, 225, 225, 1.0);
+  }
+  > .row:nth-of-type(even) {
+    background: transparent;
+  }
+
+  &.tinted {
+    > .row:nth-of-type(odd) {
+      background: rgba(255, 255, 255, 0.4);
+    }
+    > .row:nth-of-type(even) {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &.shaded {
+    > .row:nth-of-type(odd) {
+      background: rgba(0, 0, 0, 0.3);
+    }
+    > .row:nth-of-type(even) {
+      background: rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.make-grid-aligned(@alignment) {
+  vertical-align: @alignment;
+
+  > [class*='@{cell}'],
+  > .row > [class*='@{cell}'] {
+    vertical-align: @alignment;
+  }
+}
+
+.make-grid-table() {
+  display: table;
+
+  > [class*='@{cell}'] {
+    display: table-cell;
+  }
+
+  > .row {
+    display: table-row;
+
+    > [class*='@{cell}'] {
+      display: table-cell;
+    }
+  }
+}
+

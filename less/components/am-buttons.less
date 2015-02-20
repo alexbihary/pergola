@@ -1,0 +1,223 @@
+//-------------------------------------------
+// BUTTON BASE
+//-------------------------------------------
+[ui-btn] { //base
+  color: @gray10;
+  background-color: @white;
+  border-color: @gray10;
+  border-style: solid;
+  border-width: 0;
+
+  font-weight: 300;
+  font-size: 16px;
+  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-decoration: none;
+  text-align: center;
+
+  line-height: 40px;
+  height: 40px;
+  padding: 0 40px;
+  margin: 5px; //demo only
+
+  display: inline-block;
+  appearance: none;
+  cursor: pointer;
+
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+
+  &:hover, &:focus {
+    color: @white;
+    background-color: @gray10;
+    text-decoration: none;
+    outline: none;
+
+    &[ui-btn~=borderless] {
+      color: darken(@gray10, 10%);
+    }
+  }
+}
+
+
+//-------------------------------------------
+// BUTTON SIZES
+//-------------------------------------------
+.make-button-size(@fontSize; @size) {
+  font-size: @fontSize;
+  height: @size;
+  line-height: @size;
+  padding: 0 @size;
+
+  &[ui-btn~=box], &[ui-btn~=circle], &[ui-btn~=square] {
+    width: @size;
+  }
+
+  &[ui-btn~=outline] {
+    line-height: (@size - 2);
+    padding: 0 (@size - 1);
+  }
+
+  &[ui-btn~=border] {
+    line-height: (@size - 4);
+    padding: 0 (@size - 2);
+  }
+}
+
+[ui-btn~=xs] {
+  .make-button-size(9.6px, 24px);
+}
+[ui-btn~=sm] {
+  .make-button-size(12px, 30px);
+}
+[ui-btn~=md] {} //default size
+[ui-btn~=lg] {
+  .make-button-size(20px, 50px);
+}
+[ui-btn~=xl] {
+  .make-button-size(24px, 60px);
+}
+
+//-------------------------------------------
+// BUTTON VARIATIONS
+//-------------------------------------------
+[ui-btn~=outline] {
+  border-width: 1px;
+
+  //default btn
+  line-height: 38px;
+  padding: 0 39px;
+}
+
+[ui-btn~=border] {
+  border-width: 2px;
+
+  //default btn
+  line-height: 36px;
+  padding: 0 38px;
+}
+
+
+
+[ui-btn~=box],
+[ui-btn~=circle],
+[ui-btn~=square] {
+  width: 40px;
+  padding: 0 !important;
+}
+
+[ui-btn~=box] {
+  border-radius: 4px;
+}
+[ui-btn~=circle] {
+  border-radius: 100%;
+}
+
+[ui-btn~=round] {
+  border-radius: 4px;
+}
+[ui-btn~=pill] {
+  border-radius: 200px;
+}
+
+//-------------------------------------------
+// BUTTON COLORS
+//-------------------------------------------
+.make-button-style(@color) {
+  color: @white;
+  background-color: @color;
+  border-color: darken(@color, 10%);
+
+  &:hover, &:focus {
+    background-color: darken(@color, 10%);
+  }
+
+  &[ui-btn~=border] {
+    color: @color;
+    background: none;
+    &:hover, &:focus {
+      color: @white;
+      background-color: darken(@color, 10%);
+    }
+  }
+
+  &[ui-btn~=borderless] {
+    color: @color;
+    &:hover, &:focus {
+      color: darken(@color, 10%);
+    }
+  }
+}
+
+[ui-btn~=primary]   { .make-button-style(@primary);   }
+[ui-btn~=success]   { .make-button-style(@success);   }
+[ui-btn~=info]      { .make-button-style(@info);      }
+[ui-btn~=warning]   { .make-button-style(@warning);   }
+[ui-btn~=danger]    { .make-button-style(@danger);    }
+[ui-btn~=secondary] { .make-button-style(@secondary); }
+[ui-btn~=muted]     { .make-button-style(@muted);     }
+
+
+[ui-btn~=borderless] {
+  background: none;
+  border-width: 0;
+
+  &:hover, &:focus {
+    background: none;
+  }
+}
+
+[ui-btn][disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+
+//-------------------------------------------
+// BUTTON GROUPS
+//-------------------------------------------
+[ui-group] {
+  display: inline-block;
+  font-size: 0;
+}
+[ui-group] > [ui-btn] {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+[ui-group] > [ui-btn]:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+[ui-group] > [ui-btn]:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+[ui-group] > [ui-btn]:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+[ui-group~=divided] {
+  > [ui-btn]:not(:last-child) {
+    border-right-width: 0;
+  }
+}
+
+[ui-group]:not([ui-group~=divided]) {
+  > [ui-btn]:first-child {
+    border-right-width: 0;
+  }
+
+  > [ui-btn]:last-child {
+    border-left-width: 0;
+  }
+
+  > [ui-btn]:not(:first-child):not(:last-child) {
+    border-right-width: 0;
+    border-left-width: 0;
+  }
+}

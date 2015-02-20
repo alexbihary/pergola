@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pergola - Grid Components</title>
+  <link rel="stylesheet" href="../dist/css/pergola-modules.css" />
+  <style>
+    .demo {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <section ui-grid="container" class="demo" ui-bg="warning">
+    <div ui-cols="sm:8 md:6 lg:4 xl:3" ui-bg="primary">
+      Here is Content A
+    </div>
+    <div ui-cols="sm:4 md:6 lg:4 xl:3" ui-text="center primary">
+      Here is Content B
+    </div>
+    <div ui-cols="xs:6 sm:4 md:6 lg:4 xl:3" ui-bg="success">
+      Here is Content C
+    </div>
+    <div ui-cols="xs:6 sm:8 md:6 lg:4 xl:3" ui-bg="info">
+      Here is Content D
+    </div>
+  </section>
+
+  <div ui-grid>
+    <pre ui-cols ui-text="center info">section[ui-grid='container padded'][ui-text=center]>div[ui-cols=sm:3]*12>div[ui-bg=info]{$}</pre>
+  </div>
+  <section ui-grid="container padded" ui-text="center">
+    <div ui-cols="sm:3">
+      <div ui-bg="info">1</div>
+    </div>
+    <div ui-cols="sm:3">
+      <div ui-bg="info">2</div>
+    </div>
+    <div ui-cols="sm:3">
+      <div ui-bg="info">3</div>
+    </div>
+    <div ui-cols="sm:3">
+      <div ui-bg="info">4</div>
+    </div>
+    <div ui-cols="sm:3">
+      <div ui-bg="info">5</div>
+    </div>
+    <div ui-cols="sm:3">
+      <div ui-bg="info">6</div>
+    </div>
+    <div ui-cols="sm:3">
+      <div ui-bg="info">7</div>
+    </div>
+    <div ui-cols="sm:3">
+      <div ui-bg="info">8</div>
+    </div>
+    <div ui-cols="sm:3">
+      <div ui-bg="info">9</div>
+    </div>
+    <div ui-cols="sm:3">
+      <div ui-bg="info">10</div>
+    </div>
+    <div ui-cols="sm:3">
+      <div ui-bg="info">11</div>
+    </div>
+    <div ui-cols="sm:3">
+      <div ui-bg="info">12</div>
+    </div>
+  </section>
+
+  <div ui-grid>
+    <pre ui-cols ui-text="center warning"></pre>
+  </div>
+  <nav id="button-style-menu" ui-grid="container">
+    <ul>
+      <li>
+        <button ui-btn>Default</button>
+        <button disabled ui-btn>Default</button>
+      </li>
+      <li>
+        <button ui-btn="primary">Primary</button>
+        <button disabled ui-btn="primary">Primary</button>
+      </li>
+      <li>
+        <button ui-btn="secondary">Secondary</button>
+        <button disabled ui-btn="secondary">Secondary</button>
+      </li>
+      <li>
+        <button ui-btn="success">Success</button>
+        <button disabled ui-btn="success">Success</button>
+      </li>
+      <li>
+        <button ui-btn="info">Info</button>
+        <button disabled ui-btn="info">Info</button>
+      </li>
+      <li>
+        <button ui-btn="warning">Warning</button>
+        <button disabled ui-btn="warning">Warning</button>
+      </li>
+      <li>
+        <button ui-btn="danger">Danger</button>
+        <button disabled ui-btn="danger">Danger</button>
+      </li>
+      <li>
+        <button ui-btn="muted">Muted</button>
+        <button disabled ui-btn="muted">Muted</button>
+      </li>
+    </ul>
+  </nav>
+  <section class="button-component-demo" ui-grid="container padded" ui-text="center">
+    <div ui-cols>
+      <button disabled ui-btn="xl outline">Default</button>
+      <button disabled ui-btn="xl">Default</button>
+      <button disabled ui-btn="xl border">Default</button>
+      <button disabled ui-btn="xl borderless">Default</button>
+    </div>
+    <div ui-cols>
+      <button ui-btn="xl pill outline">Default</button>
+      <button ui-btn="xl pill">Default</button>
+      <button ui-btn="xl pill border">Default</button>
+    </div>
+    <div ui-cols>
+      <button ui-btn="xl round outline">Default</button>
+      <button ui-btn="xl round">Default</button>
+      <button ui-btn="xl round border">Default</button>
+    </div>
+    <div ui-cols>
+      <button ui-btn="lg outline">Default</button>
+      <button ui-btn="lg">Default</button>
+      <button ui-btn="lg border">Default</button>
+      <button ui-btn="lg borderless">Default</button>
+    </div>
+    <div ui-cols>
+      <button ui-btn="lg pill outline">Default</button>
+      <button ui-btn="lg pill">Default</button>
+      <button ui-btn="lg pill border">Default</button>
+    </div>
+    <div ui-cols>
+      <button ui-btn="lg round outline">Default</button>
+      <button ui-btn="lg round">Default</button>
+      <button ui-btn="lg round border">Default</button>
+    </div>
+    <div ui-cols>
+      <button ui-btn="outline">Default</button>
+      <button ui-btn>Default</button>
+      <button ui-btn="border">Default</button>
+      <button ui-btn="borderless">Default</button>
+    </div>
+    <div ui-cols>
+      <button ui-btn="pill outline">Default</button>
+      <button ui-btn="pill">Default</button>
+      <button ui-btn="pill border">Default</button>
+    </div>
+    <div ui-cols>
+      <button ui-btn="round outline">Default</button>
+      <button ui-btn="round">Default</button>
+      <button ui-btn="round border">Default</button>
+    </div>
+    <div ui-cols>
+      <button ui-btn="sm outline">Default</button>
+      <button ui-btn="sm">Default</button>
+      <button ui-btn="sm border">Default</button>
+      <button ui-btn="sm borderless">Default</button>
+    </div>
+    <div ui-cols>
+      <button ui-btn="sm pill outline">Default</button>
+      <button ui-btn="sm pill">Default</button>
+      <button ui-btn="sm pill border">Default</button>
+    </div>
+    <div ui-cols>
+      <button ui-btn="sm round outline">Default</button>
+      <button ui-btn="sm round">Default</button>
+      <button ui-btn="sm round border">Default</button>
+    </div>
+    <div ui-cols>
+      <button ui-btn="xs outline">Default</button>
+      <button ui-btn="xs">Default</button>
+      <button ui-btn="xs border">Default</button>
+      <button ui-btn="xs borderless">Default</button>
+    </div>
+    <div ui-cols>
+      <button ui-btn="xs pill outline">Default</button>
+      <button ui-btn="xs pill">Default</button>
+      <button ui-btn="xs pill border">Default</button>
+    </div>
+    <div ui-cols>
+      <button ui-btn="xs round outline">Default</button>
+      <button ui-btn="xs round">Default</button>
+      <button ui-btn="xs round border">Default</button>
+    </div>
+  </section>
+  <section class="button-component-demo" ui-grid="container padded" ui-text="center">
+    <div ui-cols>
+      <button ui-btn="xl box">&times;</button>
+      <button ui-btn="xl circle">&times;</button>
+      <button ui-btn="xl square">&times;</button>
+      <button ui-btn="xl box border">&times;</button>
+      <button ui-btn="xl circle border">&times;</button>
+      <button ui-btn="xl square border">&times;</button>
+      <button ui-btn="xl box borderless">&times;</button>
+    </div>
+    <div ui-cols>
+      <button ui-btn="lg box">&times;</button>
+      <button ui-btn="lg circle">&times;</button>
+      <button ui-btn="lg square">&times;</button>
+      <button ui-btn="lg box border">&times;</button>
+      <button ui-btn="lg circle border">&times;</button>
+      <button ui-btn="lg square border">&times;</button>
+      <button ui-btn="lg box borderless">&times;</button>
+    </div>
+    <div ui-cols>
+      <button ui-btn="box">&times;</button>
+      <button ui-btn="circle">&times;</button>
+      <button ui-btn="square">&times;</button>
+      <button ui-btn="box border">&times;</button>
+      <button ui-btn="circle border">&times;</button>
+      <button ui-btn="square border">&times;</button>
+      <button ui-btn="box borderless">&times;</button>
+    </div>
+    <div ui-cols>
+      <button ui-btn="sm box">&times;</button>
+      <button ui-btn="sm circle">&times;</button>
+      <button ui-btn="sm square">&times;</button>
+      <button ui-btn="sm box border">&times;</button>
+      <button ui-btn="sm circle border">&times;</button>
+      <button ui-btn="sm square border">&times;</button>
+      <button ui-btn="sm box borderless">&times;</button>
+    </div>
+    <div ui-cols>
+      <button ui-btn="xs box">&times;</button>
+      <button ui-btn="xs circle">&times;</button>
+      <button ui-btn="xs square">&times;</button>
+      <button ui-btn="xs box border">&times;</button>
+      <button ui-btn="xs circle border">&times;</button>
+      <button ui-btn="xs square border">&times;</button>
+      <button ui-btn="xs box borderless">&times;</button>
+    </div>
+  </section>
+
+  <section ui-grid="container padded" ui-text="center">
+    <div ui-cols>
+      <div ui-group>
+        <button ui-btn="xl outline pill">Default</button>
+        <button ui-btn="xl outline">Default</button>
+        <button ui-btn="xl outline pill">Default</button>
+      </div>
+    </div>
+    <div ui-cols>
+      <div ui-group="divided">
+        <button ui-btn="xl border pill">Default</button>
+        <button ui-btn="xl border">Default</button>
+        <button ui-btn="xl border pill">Default</button>
+      </div>
+    </div>
+    <div ui-cols>
+      <div ui-group>
+        <button ui-btn="xl pill">Default</button>
+        <button ui-btn="xl primary">Primary</button>
+        <button ui-btn="xl secondary pill">Secondary</button>
+      </div>
+    </div>
+    <div ui-cols>
+      <div ui-group>
+        <button ui-btn="lg round">Default</button>
+        <button ui-btn="lg primary">Primary</button>
+        <button ui-btn="lg secondary">Secondary</button>
+        <button ui-btn="lg success">Success</button>
+        <button ui-btn="lg info round">Info</button>
+      </div>
+    </div>
+    <div ui-cols>
+      <div ui-group>
+        <button ui-btn="pill">Default</button>
+        <button ui-btn="primary">Primary</button>
+        <button ui-btn="secondary">Secondary</button>
+        <button ui-btn="success">Success</button>
+        <button ui-btn="info">Info</button>
+        <button ui-btn="warning">Warning</button>
+        <button ui-btn="danger pill">Danger</button>
+      </div>
+    </div>
+    <div ui-cols>
+      <div ui-group>
+        <button ui-btn="sm round">Default</button>
+        <button ui-btn="sm primary">Primary</button>
+        <button ui-btn="sm secondary">Secondary</button>
+        <button ui-btn="sm success">Success</button>
+        <button ui-btn="sm info">Info</button>
+        <button ui-btn="sm warning">Warning</button>
+        <button ui-btn="sm danger round">Danger</button>
+      </div>
+    </div>
+    <div ui-cols>
+      <div ui-group>
+        <button ui-btn="xs round">Default</button>
+        <button ui-btn="xs primary">Primary</button>
+        <button ui-btn="xs secondary">Secondary</button>
+        <button ui-btn="xs success">Success</button>
+        <button ui-btn="xs info">Info</button>
+        <button ui-btn="xs warning">Warning</button>
+        <button ui-btn="xs danger round">Danger</button>
+      </div>
+    </div>
+  </section>
+
+  <section ui-grid="container padded" ui-text="center">
+    <div ui-cols="md:4">
+      <button ui-btn="xl outline">Default</button>
+      <button ui-btn="lg">Default</button>
+      <button ui-btn>Default</button>
+      <button ui-btn="sm">Default</button>
+      <button ui-btn="xs">Default</button>
+    </div>
+    <div ui-cols="md:4">
+      <button ui-btn="primary xl">Primary</button>
+      <button ui-btn="primary lg">Primary</button>
+      <button ui-btn="primary">Primary</button>
+      <button ui-btn="primary sm">Primary</button>
+      <button ui-btn="primary xs">Primary</button>
+    </div>
+    <div ui-cols="md:4">
+      <button ui-btn="success xl">Success</button>
+      <button ui-btn="success lg">Success</button>
+      <button ui-btn="success">Success</button>
+      <button ui-btn="success sm">Success</button>
+      <button ui-btn="success xs">Success</button>
+    </div>
+    <div ui-cols="md:4">
+      <button ui-btn="info xl pill">Info</button>
+      <button ui-btn="info lg pill">Info</button>
+      <button ui-btn="info pill">Info</button>
+      <button ui-btn="info sm pill">Info</button>
+      <button ui-btn="info xs pill">Info</button>
+    </div>
+    <div ui-cols="md:4">
+      <button ui-btn="warning xl round">Warning</button>
+      <button ui-btn="warning lg round">Warning</button>
+      <button ui-btn="warning round">Warning</button>
+      <button ui-btn="warning sm round">Warning</button>
+      <button ui-btn="warning xs round">Warning</button>
+    </div>
+    <div ui-cols="md:4">
+      <button ui-btn="danger xl">Danger</button>
+      <button ui-btn="danger lg">Danger</button>
+      <button ui-btn="danger">Danger</button>
+      <button ui-btn="danger sm">Danger</button>
+      <button ui-btn="danger xs">Danger</button>
+    </div>
+  </section>
+
+  <script src="../dist/js/pergola.js"></script>
+</body>
+</html>

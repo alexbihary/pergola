@@ -3,9 +3,9 @@
 //default variables
 @precision: 20;
 
-.make-grid-base(@gridName; @cellName; @precision: @precision) {
+.make-grid-base(@am; @cols; @precision: @precision) {
   //grids and rows
-  [@{gridName}] {
+  [@{am}] {
     display: block;
     position: relative;
     margin: 0 auto;
@@ -15,7 +15,7 @@
   }
 
   //cells and columns, initialized to 100% width
-  [@{cellName}] {//,
+  [@{cols}] {//,
   //.columns > * {
     display: inline-block;
     position: relative;
@@ -24,9 +24,7 @@
     vertical-align: top; //req. once these were no longer floated
   }
 
-  //.content,
-  [@{cellName}]:not([@{gridName}]) {//,
-  //.columns > *:not(.grid) {
+  [@{cols}]:not([@{am}]) {
     font-size: 1.0rem;
   }
 
@@ -50,11 +48,11 @@
 }
 
 //cell
-.make-grid(@part; @cellName; @class; @index; @precision: @precision) when (@index > 0) and (@part = @cell) {
+.make-grid-columns(@am; @class; @index; @precision: @precision) when (@index > 0) {
   @val: round((@index / @grid-columns), @precision);
   //.@{class}@{cell}@{index} { width: percentage(@val); }
-  [@{cellName}~=~"@{class}@{index}"] { width: percentage(@val); }
-  .make-grid(@part; @cellName; @class; (@index - 1)); //recursive
+  [@{am}~=~"'@{class}:@{index}'"] { width: percentage(@val); }
+  .make-grid-columns(@am; @class; (@index - 1)); //recursive
 }
 //push
 .make-grid(@part; @cellName; @class; @index; @precision: @precision) when (@index > 0) and (@part = @push) {

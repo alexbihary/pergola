@@ -1,0 +1,48 @@
+@import "../mixins/am-grid";
+@import "../mixins/am-grid-extensions";
+
+@grid: ui-grid;
+@cols: ui-cols;
+@xs-container: 350px;
+@sm-container: 468px;
+@md-container: 750px;
+@lg-container: 970px;
+@xl-container: 1170px;
+
+.make-grid-base(@grid, @cols);
+.make-grid-container-base(@grid);
+
+@pad: 2px;
+.make-padded-grids(@pad) {
+  .make-grid-padded(@grid, @cols, padded, @pad, xy);
+  .make-grid-padded(@grid, @cols, xpad, @pad, x);
+  .make-grid-padded(@grid, @cols, ypad, @pad, y);
+}
+
+
+@media @mq-xs {
+  .make-grid-container(@grid, @xs-container);
+  .make-grid-columns(@cols, @xs, @grid-columns);
+  .make-padded-grids(@pad);
+}
+@media @mq-sm {
+  .make-grid-container(@grid, @sm-container);
+  .make-grid-columns(@cols, @sm, @grid-columns);
+  .make-padded-grids(@pad*1.5);
+}
+@media @mq-md {
+  .make-grid-container(@grid, @md-container);
+  .make-grid-columns(@cols, @md, @grid-columns);
+  .make-padded-grids(@pad*1.5*1.5);
+}
+@media @mq-lg {
+  .make-grid-container(@grid, @lg-container);
+  .make-grid-columns(@cols, @lg, @grid-columns);
+  .make-padded-grids(@pad*1.5*1.5*1.5);
+}
+@media @mq-xl {
+  .make-grid-container(@grid, @xl-container);
+  .make-grid-columns(@cols, @xl, @grid-columns);
+  .make-padded-grids(@pad*1.5*1.5*1.5*1.5);
+}
+
