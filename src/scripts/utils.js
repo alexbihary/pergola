@@ -1,7 +1,7 @@
 'use strict';
 (function(w, d) {
 
-  var styleList = 'primary,success,info,warning,danger,secondary,muted,inverse'.split(',');
+  var styleList = 'default,primary,success,info,warning,danger,secondary,muted,inverse'.split(',');
 
   function switchButtons(style) {
     var btns = d.querySelectorAll('.button-component-demo button');

@@ -73,11 +73,22 @@
   <div ui-grid>
     <pre ui-cols ui-text="center warning"></pre>
   </div>
-  <nav id="button-style-menu" ui-grid="container">
+  <nav ui-nav ui-grid="container" ui-bg="default">
+    <ul>
+      <li><a href="#" ui-btn="">Home</a></li>
+      <li><a href="#" ui-btn="">About</a></li>
+      <li><a href="#" ui-btn="">Contact</a></li>
+    </ul>
+  </nav>
+  <nav id="button-style-menu" ui-grid="container" ui-nav>
     <ul>
       <li>
-        <button ui-btn>Default</button>
-        <button disabled ui-btn>Default</button>
+        <button ui-btn>Plain</button>
+        <button disabled ui-btn>Plain</button>
+      </li>
+      <li>
+        <button ui-btn="default">Default</button>
+        <button disabled ui-btn="default">Default</button>
       </li>
       <li>
         <button ui-btn="primary">Primary</button>
@@ -115,10 +126,10 @@
   </nav>
   <section class="button-component-demo" ui-grid="container padded" ui-text="center">
     <div ui-cols>
-      <button disabled ui-btn="xl outline">Default</button>
-      <button disabled ui-btn="xl">Default</button>
-      <button disabled ui-btn="xl border">Default</button>
-      <button disabled ui-btn="xl borderless">Default</button>
+      <button ui-btn="xl outline">Default</button>
+      <button ui-btn="xl">Default</button>
+      <button ui-btn="xl border">Default</button>
+      <button ui-btn="xl borderless">Default</button>
     </div>
     <div ui-cols>
       <button ui-btn="xl pill outline">Default</button>
@@ -197,49 +208,49 @@
   </section>
   <section class="button-component-demo" ui-grid="container padded" ui-text="center">
     <div ui-cols>
-      <button ui-btn="xl box">&times;</button>
+      <button ui-btn="xl square round">&times;</button>
       <button ui-btn="xl circle">&times;</button>
       <button ui-btn="xl square">&times;</button>
-      <button ui-btn="xl box border">&times;</button>
+      <button ui-btn="xl square round border">&times;</button>
       <button ui-btn="xl circle border">&times;</button>
       <button ui-btn="xl square border">&times;</button>
-      <button ui-btn="xl box borderless">&times;</button>
+      <button ui-btn="xl square round borderless">&times;</button>
     </div>
     <div ui-cols>
-      <button ui-btn="lg box">&times;</button>
+      <button ui-btn="lg square round">&times;</button>
       <button ui-btn="lg circle">&times;</button>
       <button ui-btn="lg square">&times;</button>
-      <button ui-btn="lg box border">&times;</button>
+      <button ui-btn="lg square round border">&times;</button>
       <button ui-btn="lg circle border">&times;</button>
       <button ui-btn="lg square border">&times;</button>
-      <button ui-btn="lg box borderless">&times;</button>
+      <button ui-btn="lg square round borderless">&times;</button>
     </div>
     <div ui-cols>
-      <button ui-btn="box">&times;</button>
+      <button ui-btn="square round">&times;</button>
       <button ui-btn="circle">&times;</button>
       <button ui-btn="square">&times;</button>
-      <button ui-btn="box border">&times;</button>
+      <button ui-btn="square round border">&times;</button>
       <button ui-btn="circle border">&times;</button>
       <button ui-btn="square border">&times;</button>
-      <button ui-btn="box borderless">&times;</button>
+      <button ui-btn="square round borderless">&times;</button>
     </div>
     <div ui-cols>
-      <button ui-btn="sm box">&times;</button>
+      <button ui-btn="sm square round">&times;</button>
       <button ui-btn="sm circle">&times;</button>
       <button ui-btn="sm square">&times;</button>
-      <button ui-btn="sm box border">&times;</button>
+      <button ui-btn="sm square round border">&times;</button>
       <button ui-btn="sm circle border">&times;</button>
       <button ui-btn="sm square border">&times;</button>
-      <button ui-btn="sm box borderless">&times;</button>
+      <button ui-btn="sm square round borderless">&times;</button>
     </div>
     <div ui-cols>
-      <button ui-btn="xs box">&times;</button>
+      <button ui-btn="xs square round">&times;</button>
       <button ui-btn="xs circle">&times;</button>
       <button ui-btn="xs square">&times;</button>
-      <button ui-btn="xs box border">&times;</button>
+      <button ui-btn="xs square round border">&times;</button>
       <button ui-btn="xs circle border">&times;</button>
       <button ui-btn="xs square border">&times;</button>
-      <button ui-btn="xs box borderless">&times;</button>
+      <button ui-btn="xs square round borderless">&times;</button>
     </div>
   </section>
 

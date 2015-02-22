@@ -2,9 +2,9 @@
 // BUTTON BASE
 //-------------------------------------------
 [ui-btn] { //base
-  color: @gray10;
-  background-color: @white;
-  border-color: @gray10;
+  color: @inverse;
+  background-color: transparent;
+  border-color: @inverse;
   border-style: solid;
   border-width: 0;
 
@@ -17,7 +17,6 @@
   line-height: 40px;
   height: 40px;
   padding: 0 40px;
-  margin: 5px; //demo only
 
   display: inline-block;
   appearance: none;
@@ -28,15 +27,23 @@
   -webkit-transition-duration: .3s;
   transition-duration: .3s;
 
+  &[ui-btn~=outline] {
+    line-height: 38px;
+    padding: 0 39px;
+  }
+
+  &[ui-btn~=border] {
+    line-height: 36px;
+    padding: 0 38px;
+  }
+
   &:hover, &:focus {
-    color: @white;
-    background-color: @gray10;
     text-decoration: none;
     outline: none;
+  }
 
-    &[ui-btn~=borderless] {
-      color: darken(@gray10, 10%);
-    }
+  &:active, &.active {
+    color: darken(@white, 40%);
   }
 }
 
@@ -84,32 +91,17 @@
 //-------------------------------------------
 [ui-btn~=outline] {
   border-width: 1px;
-
-  //default btn
-  line-height: 38px;
-  padding: 0 39px;
 }
-
 [ui-btn~=border] {
   border-width: 2px;
-
-  //default btn
-  line-height: 36px;
-  padding: 0 38px;
 }
 
-
-
-[ui-btn~=box],
 [ui-btn~=circle],
 [ui-btn~=square] {
   width: 40px;
   padding: 0 !important;
 }
 
-[ui-btn~=box] {
-  border-radius: 4px;
-}
 [ui-btn~=circle] {
   border-radius: 100%;
 }
@@ -127,10 +119,16 @@
 .make-button-style(@color) {
   color: @white;
   background-color: @color;
-  border-color: darken(@color, 10%);
+  border-color: @color;
 
   &:hover, &:focus {
     background-color: darken(@color, 10%);
+    border-color: darken(@color, 10%);
+  }
+  &:active, &.active {
+    color: lighten(@color, 20%);
+    background-color: darken(@color, 20%);
+    border-color: darken(@color, 20%);
   }
 
   &[ui-btn~=border] {
@@ -139,6 +137,12 @@
     &:hover, &:focus {
       color: @white;
       background-color: darken(@color, 10%);
+      border-color: darken(@color, 10%);
+    }
+    &:active, &.active {
+      color: lighten(@color, 20%);
+      background-color: darken(@color, 20%);
+      border-color: darken(@color, 20%);
     }
   }
 
@@ -147,9 +151,13 @@
     &:hover, &:focus {
       color: darken(@color, 10%);
     }
+    &:active, &.active {
+      color: lighten(@color, 20%);
+    }
   }
 }
 
+[ui-btn~=default]   { .make-button-style(@default);   }
 [ui-btn~=primary]   { .make-button-style(@primary);   }
 [ui-btn~=success]   { .make-button-style(@success);   }
 [ui-btn~=info]      { .make-button-style(@info);      }
@@ -164,12 +172,12 @@
   background: none;
   border-width: 0;
 
-  &:hover, &:focus {
+  &:hover, &:focus, &:active, &.active {
     background: none;
   }
 }
 
-[ui-btn][disabled] {
+[ui-btn][disabled], [ui-btn].disabled {
   opacity: 0.5;
   pointer-events: none;
   cursor: not-allowed;
@@ -180,7 +188,7 @@
 // BUTTON GROUPS
 //-------------------------------------------
 [ui-group] {
-  display: inline-block;
+  //display: inline-block; //??
   font-size: 0;
 }
 [ui-group] > [ui-btn] {

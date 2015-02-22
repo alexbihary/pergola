@@ -3,19 +3,19 @@
 an 'attribute modular' CSS framework for modern browsers with semantic sensibility
 
 
-## Components
+## Modules
 
-- Grid Components
-- Navigation Components
-- Button Components
-- Button Group Components
-- Dropdown Components
+- Grid Module
+- Navigation Module
+- Button Module
+- Group Module
+- Dropdown Module
 - Button Dropdown Components
 
 
-## Modifiers
+## Traits
 
-- Text Alignment Modifiers
+- Text Modifiers
 - Background Modifiers
 
 
@@ -110,9 +110,9 @@ TODO: add variations for tabs, pills, stacked pills.
 </body>
 ```
 
-### Button Components
+### Button Modules
 
-Add a `ui-btn` attribute to an `a`, `input` or `button` element to style a basic button. Set the value to select size variations (xs, sm, md, lg, xl), semantic variations (primary, success, info, warning, danger), and state (active, disabled).
+Add a `ui-btn` attribute to an `a`, `input` or `button` element to style a basic button. Set the value to select size variations (xs, sm, md, lg, xl), semantic variations (default, primary, secondary, success, info, warning, danger, muted, inverse). Button state is handled with classes (active, disabled), as well as with pseudo-class `active` and attribute `disabled`.
 ```
 <button ui-btn>Default</button>
 <button ui-btn="primary">Primary</button>
@@ -127,8 +127,13 @@ Add a `ui-btn` attribute to an `a`, `input` or `button` element to style a basic
 <button ui-btn="lg">Large button</button>
 <button ui-btn="xl">Extra large button</button>
 
-<button ui-btn="active">Active state</button>
-<button ui-btn="disabled">Disabled state</button>
+<button class="active">Active state</button>
+<button disabled>Disabled state</button>
+```
+
+Buttons by default are flat and do not have a border. Add a value to opt-in to various button variations (outline, border, borderless, round, pill, circle, square).
+```
+<button ui-btn="outline pill">Button</button>
 ```
 
 ### Dropdown Components
