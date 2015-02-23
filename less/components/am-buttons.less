@@ -57,7 +57,8 @@
   line-height: @size;
   padding: 0 @size;
 
-  &[ui-btn~=box], &[ui-btn~=circle], &[ui-btn~=square] {
+  &[ui-btn~=circle],
+  &[ui-btn~=square] {
     width: @size;
   }
 
@@ -78,7 +79,7 @@
 [ui-btn~=sm] {
   .make-button-size(12px, 30px);
 }
-[ui-btn~=md] {} //default size
+[ui-btn~=md] {} //default size (16px, 40px)
 [ui-btn~=lg] {
   .make-button-size(20px, 50px);
 }
@@ -86,32 +87,6 @@
   .make-button-size(24px, 60px);
 }
 
-//-------------------------------------------
-// BUTTON VARIATIONS
-//-------------------------------------------
-[ui-btn~=outline] {
-  border-width: 1px;
-}
-[ui-btn~=border] {
-  border-width: 2px;
-}
-
-[ui-btn~=circle],
-[ui-btn~=square] {
-  width: 40px;
-  padding: 0 !important;
-}
-
-[ui-btn~=circle] {
-  border-radius: 100%;
-}
-
-[ui-btn~=round] {
-  border-radius: 4px;
-}
-[ui-btn~=pill] {
-  border-radius: 200px;
-}
 
 //-------------------------------------------
 // BUTTON COLORS
@@ -119,30 +94,25 @@
 .make-button-style(@color) {
   color: @white;
   background-color: @color;
-  border-color: @color;
+  border-color: darken(@color, 10%);
 
   &:hover, &:focus {
     background-color: darken(@color, 10%);
-    border-color: darken(@color, 10%);
+    border-color: darken(@color, 20%);
   }
   &:active, &.active {
     color: lighten(@color, 20%);
     background-color: darken(@color, 20%);
-    border-color: darken(@color, 20%);
+    border-color: darken(@color, 30%);
   }
 
   &[ui-btn~=border] {
     color: @color;
-    background: none;
     &:hover, &:focus {
       color: @white;
-      background-color: darken(@color, 10%);
-      border-color: darken(@color, 10%);
     }
     &:active, &.active {
       color: lighten(@color, 20%);
-      background-color: darken(@color, 20%);
-      border-color: darken(@color, 20%);
     }
   }
 
@@ -168,6 +138,19 @@
 [ui-btn~=inverse]   { .make-button-style(@inverse);   }
 
 
+//-------------------------------------------
+// BUTTON VARIATIONS
+//-------------------------------------------
+[ui-btn~=outline] {
+  border-width: 1px;
+}
+[ui-btn~=border] {
+  border-width: 2px;
+
+  &:not(:hover):not(:focus):not(:active):not(.active) {
+    background: none;
+  }
+}
 [ui-btn~=borderless] {
   background: none;
   border-width: 0;
@@ -177,7 +160,25 @@
   }
 }
 
-[ui-btn][disabled], [ui-btn].disabled {
+[ui-btn~=circle],
+[ui-btn~=square] {
+  width: 40px;
+  padding: 0 !important;
+}
+
+[ui-btn~=circle] {
+  border-radius: 100%;
+}
+
+[ui-btn~=round] {
+  border-radius: 4px;
+}
+[ui-btn~=pill] {
+  border-radius: 200px;
+}
+
+[ui-btn][disabled],
+[ui-btn].disabled {
   opacity: 0.5;
   pointer-events: none;
   cursor: not-allowed;
